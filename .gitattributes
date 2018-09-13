@@ -1,12 +1,1 @@
-images/IMG_20180911_213152.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_212914.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_213112.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_213133.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_212926.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_213055.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_213059.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_213102.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_213105.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_212815.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_212828.jpg filter=lfs diff=lfs merge=lfs -text
-images/IMG_20180911_212849.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
