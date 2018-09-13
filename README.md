@@ -1,6 +1,27 @@
 # em-el
 Learning Machine Learning
 
+# Running locally
+
+Install VirtualEnv, then setup your Python environment.
+
+```
+mkvirtualenv em-el
+workon em-el
+pip install -r requirements.txt
+```
+
+Run notebook
+```
+jupyter notebook
+```
+
+If needed, setup a kernel to access from Jupyter Notebook.
+More info: https://stackoverflow.com/a/43234969/950683
+```
+python -m ipykernel install --user --name=em-el
+```
+
 # Tracking large files in Git with Git LFS
 
 [Installing Git LFS](https://help.github.com/articles/installing-git-large-file-storage/)
