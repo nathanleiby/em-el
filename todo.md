@@ -1,0 +1,5 @@
+- [ ] Take more Ikea table photos that are easy to segment... segment them.
+- [ ] Label the segmented output file in our standardized format.
+- [ ] Start trying out Keras to process the single image files. 
+  - [ ] What's the appropriate input format ... matrix of pixels? other?
+  - [ ] Figure out approx `n` of single card images we need.
