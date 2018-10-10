@@ -77,3 +77,12 @@ We like that this has a "did you do it correctly" evaluatability.
         => png for now
 
     # mapping between image files with cards and instances of labels
+
+## General Problems to Solve
+
+- removing shadows (or any major bright / dark spots)
+    - https://stackoverflow.com/questions/42918752/how-to-remove-the-shadows-from-these-pictures-using-python-opencv
+    - https://stackoverflow.com/questions/9081930/how-to-remove-the-shadow-in-image-by-using-opencv
+    - http://aqua.cs.uiuc.edu/site/projects/shadow.html
+    - http://dhoiem.web.engr.illinois.edu/publications/cvpr11_shadow.pdf
+
