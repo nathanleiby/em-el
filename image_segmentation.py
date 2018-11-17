@@ -133,8 +133,14 @@ def find_individual_card_images_from_picture(image_filename, card_size_ratio=RAT
             image_show(warped)
         if save_fig:
             filename = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f') + ".png"
-            print("\tSaving {} ...".format(filename))
-            plt.savefig(os.path.join('images', 'candidate_images', filename), bbox_inches='tight')
+            dir_path = os.path.join('images', 'candidate_images', os.path.splitext(image_filename)[0])
+            try:
+                os.makedirs(dir_path)
+            except:
+                pass
+            full_path = os.path.join(dir_path, filename)
+            print("\tSaving {} ...".format(full_path))
+            plt.imsave(full_path, warped)
         plt.close()
         warped_cards.append(warped)
     return warped
@@ -147,4 +153,4 @@ if __name__ == "__main__":
         # find_individual_card_images_from_picture(image_filename, show=True)
         # It looks like we can get more of the cards in if we relax the threshold requirement
         # find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004)
-        find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004, show=True, save_fig=True)
+        find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004, save_fig=True)
