@@ -22,7 +22,6 @@ def image_show(image, nrows=1, ncols=1, cmap='gray', figsize=(16,16), **kwargs):
     ax.axis('off')
     return fig, ax
 
-
 # ## Try different points transform for card identification
 #
 # Based on blog post here: https://www.pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/
@@ -141,37 +140,11 @@ def find_individual_card_images_from_picture(image_filename, card_size_ratio=RAT
     return warped
 
 
-# In[ ]:
-
-
-
-# for ratio_threshold in np.linspace(0.25, 1, 6) * RATIO_THRESHOLD:
-#     print("ratio_threshold", ratio_threshold)
-#     for image_filename in image_files:
-#         filename = os.path.join(IMAGES_DIRECTORY, image_filename)
-#         loaded_file = io.imread(filename)
-#         find_cards_in_image(loaded_file.copy(), ratio_threshold=ratio_threshold, show=True)
-
-
-# image_files = [
-#     "IMG_20180911_213102.jpg",
-#     "IMG_20180911_212828.jpg",
-#     "IMG_20180916_120309.jpg",
-#     "IMG_20180916_120326.jpg",
-#     "IMG_20180916_120347.jpg",
-# ]
-
-image_files = os.listdir(IMAGES_DIRECTORY)
-
-# todo: is there some other check we can put in the threshold to catch and remove things like the electric cord?
-# take some more pictures of cards on different backgrounds
-# actually output the files with the low threshold
-# save some labeled card images
-
-
-for image_filename in image_files:
-    print(image_filename)
-    # find_individual_card_images_from_picture(image_filename, show=True)
-    # It looks like we can get more of the cards in if we relax the threshold requirement
-    # find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004)
-    find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004, show=True, save_fig=True)
+if __name__ == "__main__":
+    image_files = os.listdir(IMAGES_DIRECTORY)
+    for image_filename in image_files:
+        print(image_filename)
+        # find_individual_card_images_from_picture(image_filename, show=True)
+        # It looks like we can get more of the cards in if we relax the threshold requirement
+        # find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004)
+        find_individual_card_images_from_picture(image_filename, card_size_ratio=0.004, show=True, save_fig=True)

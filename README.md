@@ -11,6 +11,8 @@ workon em-el
 pip install -r requirements.txt
 ```
 
+## Running the Notebook
+
 Run notebook
 ```
 jupyter notebook
@@ -21,6 +23,13 @@ More info: https://stackoverflow.com/a/43234969/950683
 ```
 python -m ipykernel install --user --name=em-el
 ```
+
+## Running Image Segmentation
+
+```
+python3 image_segmentation.py
+```
+
 
 # Tracking large files in Git with Git LFS
 
