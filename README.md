@@ -95,3 +95,8 @@ We like that this has a "did you do it correctly" evaluatability.
     - http://aqua.cs.uiuc.edu/site/projects/shadow.html
     - http://dhoiem.web.engr.illinois.edu/publications/cvpr11_shadow.pdf
 
+## Labeling images
+
+We used Labelbox (https://app.labelbox.com) to manually label images of individual cards.
+
+In the beginning, we skipped some questionable impages. But later, we added a "questionable?" tag.

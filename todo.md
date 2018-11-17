@@ -1,6 +1,7 @@
 - [x] Take more Ikea table photos that are easy to segment... segment them.
-- [ ] pull minimal image_segmentation logic into a .py file
-- [ ] Label the segmented output file in our standardized format.
+- [x] pull minimal image_segmentation logic into a .py file
+- [x] Label the segmented output file in our standardized format.
+    - NOTE: Instead, labelled files via labelbox
 - [ ] Start trying out Keras to process the single image files.
   - [ ] What's the appropriate input format ... matrix of pixels? other?
   - [ ] Figure out approx `n` of single card images we need.

@@ -125,15 +125,15 @@ def find_individual_card_images_from_picture(image_filename, card_size_ratio=RAT
     possible_cards = find_cards_in_image(loaded_file.copy(), show=show, ratio_threshold=card_size_ratio)
     print("\tFound {} images in image".format(len(possible_cards)))
     warped_cards = []
-    for possible_card in possible_cards:
+    for pc_idx, possible_card in enumerate(possible_cards):
         corner_points = cv2.boxPoints(cv2.minAreaRect(possible_card))
         warped = four_point_transform(loaded_file, corner_points)
 
         if show:
             image_show(warped)
         if save_fig:
-            filename = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f') + ".png"
-            dir_path = os.path.join('images', 'candidate_images', os.path.splitext(image_filename)[0])
+            filename = "{}-card{}.png".format(os.path.splitext(image_filename)[0], pc_idx)
+            dir_path = os.path.join('images', 'candidate_images')
             try:
                 os.makedirs(dir_path)
             except:
