@@ -1,3 +1,5 @@
 scikit-image
 jupyter
 nbdime
+torch
+torchvision
