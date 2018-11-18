@@ -5,6 +5,8 @@ Learning Machine Learning
 
 Install VirtualEnv, then setup your Python environment.
 
+NOTE: Ensure you're working in a python3 environment, e.g. via `mkvirtualenv --python=/usr/bin/python3 em-el`
+
 ```
 mkvirtualenv em-el
 workon em-el
@@ -27,7 +29,7 @@ python -m ipykernel install --user --name=em-el
 ## Running Image Segmentation
 
 ```
-python3 image_segmentation.py
+python image_segmentation.py
 ```
 
 
