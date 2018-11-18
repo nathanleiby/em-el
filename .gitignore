@@ -1,3 +1,6 @@
+# Data files
+MNISTDATA/
+
 # General
 .DS_Store
 .Trashes
