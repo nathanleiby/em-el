@@ -1,5 +1,6 @@
-scikit-image
 jupyter
 nbdime
+opencv-python
+scikit-image
 torch
 torchvision

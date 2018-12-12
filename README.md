@@ -1,15 +1,31 @@
 # em-el
 Learning Machine Learning
 
+# Install Git LFS and download image files
+
+**Install**
+```
+brew install git-lfs
+git lfs install
+```
+
+**Download image files**
+```
+git lfs pull
+```
+
+For more information, see:
+
+- [Installing Git LFS](https://help.github.com/articles/installing-git-large-file-storage/)
+- [Using Git LFS](https://help.github.com/articles/configuring-git-large-file-storage/)
+- 
 # Running locally
 
-Install VirtualEnv, then setup your Python environment.
-
-NOTE: Ensure you're working in a python3 environment, e.g. via `mkvirtualenv --python=/usr/bin/python3 em-el`
+First, ensure you're working in a python3 environment:
 
 ```
-mkvirtualenv em-el
-workon em-el
+python3 -m venv ~/.virtualenvs/em-el
+source ~/.virtualenvs/em-el/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -31,14 +47,6 @@ python -m ipykernel install --user --name=em-el
 ```
 python image_segmentation.py
 ```
-
-
-# Tracking large files in Git with Git LFS
-
-[Installing Git LFS](https://help.github.com/articles/installing-git-large-file-storage/)
-
-[Using Git LFS](https://help.github.com/articles/configuring-git-large-file-storage/)
-
 
 # Set Identification
 
