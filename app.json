@@ -1,0 +1,15 @@
+{
+  "name": "em-el",
+  "description": "machine learning API",
+  "keywords": [
+    "flask",
+    "python",
+  ],
+  "repository": "https://github.com/nathanleiby/em-el",
+  "scripts": {
+    "postdeploy": "python app.py"
+  },
+  "addons": [
+    "heroku-postgresql"
+  ]
+}

@@ -1,4 +1,5 @@
 # em-el
+
 Learning Machine Learning
 
 # Install Git LFS and download image files
@@ -21,7 +22,9 @@ For more information, see:
 - 
 # Running locally
 
-First, ensure you're working in a python3 environment:
+First, ensure you're working in a python3 environment.
+
+When using Tensorflow, Python 3.6 is required. ([more info](https://www.reddit.com/r/tensorflow/comments/9eh1kf/i_have_python_37_installed_is_there_hope/))
 
 ```
 python3 -m venv ~/.virtualenvs/em-el
