@@ -3,6 +3,7 @@
 # import the necessary packages
 from keras.applications import ResNet50
 from keras.preprocessing.image import img_to_array
+import keras.models
 from keras.applications import imagenet_utils
 from PIL import Image
 import numpy as np
@@ -22,7 +23,9 @@ def load_model():
     global model
 
     # TODO: Replace with custom model for Set
-    model = ResNet50(weights="imagenet")
+    #model = ResNet50(weights="imagenet")
+    model = keras.models.load_model('./first_try.model')
+
 
     # https://github.com/keras-team/keras/issues/2397#issuecomment-254919212
     import tensorflow as tf
@@ -60,20 +63,27 @@ def predict():
             image = Image.open(io.BytesIO(image))
 
             # preprocess the image and prepare it for classification
-            image = prepare_image(image, target=(224, 224))
+            #image = prepare_image(image, target=(224, 224))
+            image = prepare_image(image, target=(150, 150))
 
             # classify the input image and then initialize the list
             # of predictions to return to the client
             with graph.as_default():
                 preds = model.predict(image)
-                results = imagenet_utils.decode_predictions(preds)
-                data["predictions"] = []
 
-                # loop over the results and add them to the list of
-                # returned predictions
-                for (imagenetID, label, prob) in results[0]:
-                    r = {"label": label, "probability": float(prob)}
-                    data["predictions"].append(r)
+                # TODO: USE CUSTOM PREDICTIONS INSTEAD
+                # results = imagenet_utils.decode_predictions(preds)
+                # data["predictions"] = []
+
+                # # loop over the results and add them to the list of
+                # # returned predictions
+                # for (imagenetID, label, prob) in results[0]:
+                #     r = {"label": label, "probability": float(prob)}
+                #     data["predictions"].append(r)
+
+                print(preds)
+                class_num = int(preds[0][0]) + 1
+                data["predictions"] = class_num
 
                 # indicate that the request was a success
                 data["success"] = True
