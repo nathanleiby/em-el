@@ -12,6 +12,7 @@
 - [ ] minimal UI: file upload, spinning, then showing results
 - [ ] phone UI: upload an image from a phone camera, since that's a more natural use case
 - [ ] (stretch) get it working from a phone video feed, so we're processing multiple images and taking best estimate across them
+- [ ] (stretch) use tensorflow via Pixel 3 GPU
 
 ---
 
