@@ -2,6 +2,7 @@
 
 - [ ] create more labeled training data
 - [ ] reflect on how the model is setup today and what changes it needs
+- [ ] experiment. iterate and document performance of various models
 
 2. Ship the model, and setup a website that uses it
 
