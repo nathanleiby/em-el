@@ -1,11 +1,16 @@
-1. Improve the quality of the model
+1. Improve the single-image model
 
 - [ ] create more labeled training data
 - [ ] reflect on how the model is setup today and what changes it needs
 - [ ] think about loss function ([more notes](https://github.com/nathanleiby/em-el/blob/master/keras-multi-label/train.py#L76-L89))
 - [ ] experiment. iterate and document performance of various models
 
-2. Ship the model, and setup a website that uses it
+2. Image segmentation model
+
+- [ ] label the images - how many cards are present
+- [ ] capture our performance here
+
+3. Ship the single-image, and setup a website that uses it
 
 - [ ] push today's model + labels to heroku site, so the API returns Set game classification results
 - [ ] add "image segmentation" support to the API, so it can process images with many cards
