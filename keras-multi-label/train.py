@@ -31,6 +31,7 @@ EPOCHS = 75
 INIT_LR = 1e-3
 BATCH_SIZE = 32
 IMAGE_DIMS = (96, 96, 3)
+RANDOM_SEED = 42
 
 
 def load_image_and_label_files():
@@ -79,7 +80,7 @@ def load_image_and_label_files():
         label_map[name] = label_list
 
     image_paths = sorted(list(paths.list_images(imgdir)))
-    random.seed(42)
+    random.seed(RANDOM_SEED)
     random.shuffle(image_paths)
 
     return image_paths, label_map
@@ -180,7 +181,7 @@ def run_model(train_x, train_y, test_x, test_y, num_output_classes, model_output
         steps_per_epoch=len(train_x) // BATCH_SIZE,
         epochs=EPOCHS,
         verbose=1,
-        callbacks_list=callbacks_list
+        # callbacks_list=callbacks_list
     )
 
     # save the model to disk
@@ -234,10 +235,11 @@ if __name__ == "__main__":
 
     # partition the data into training and testing splits using 80% of
     # the data for training and the remaining 20% for testing
-    train_x, test_x, train_y, test_y = train_test_split(
-        data, labels, test_size=0.2, random_state=42
-    )
-    
+    train_x, test_x, train_y, test_y = train_test_split(data,
+                                                        labels,
+                                                        test_size=0.2,
+                                                        random_state=RANDOM_SEED)
+
     fitted_model = run_model(train_x, 
                              train_y,
                              test_x,
