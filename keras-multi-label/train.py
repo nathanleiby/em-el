@@ -25,7 +25,6 @@ from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.model_selection import train_test_split
 
 
-
 # initialize the number of epochs to train for, initial learning rate,
 # batch size, and image dimensions
 EPOCHS = 75
@@ -34,6 +33,7 @@ BATCH_SIZE = 32
 IMAGE_DIMS = (96, 96, 3)
 RANDOM_SEED = 42
 TIME_STRING_FORMAT = "%Y%m%d-%H%M"
+
 
 def load_image_and_label_files(random_seed):
     # grab the image paths and randomly shuffle them
@@ -204,7 +204,7 @@ if __name__ == "__main__":
         required=True,
         help="path to input dataset (i.e., directory of images)",
     )
-    
+
     args = vars(ap.parse_args())
     random_seed = 42
     for i in range(3):
