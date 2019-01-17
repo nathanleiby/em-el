@@ -1,9 +1,11 @@
 1. Improve the single-image model
 
 - [ ] create more labeled training data
-- [ ] reflect on how the model is setup today and what changes it needs
+- [ ] think about model architecture- particularly are we using kernels big enough to capture shape?  Are dimensions to collapsed to capture shape
 - [ ] think about loss function ([more notes](https://github.com/nathanleiby/em-el/blob/master/keras-multi-label/train.py#L76-L89))
 - [ ] experiment. iterate and document performance of various models
+- [ ] hyperparameter search: grid search learning rate, image dimensions, data augmentation constants
+
 
 2. Image segmentation model
 
